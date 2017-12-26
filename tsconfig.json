@@ -7,7 +7,7 @@
         "module": "commonjs",
         "noImplicitReturns": true,
         "sourceMap": true,
-        "outDir": "lib"
+        "outDir": ""
     },
     "compileOnSave": true,
     "include": [
