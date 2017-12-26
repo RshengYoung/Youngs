@@ -1,0 +1,13 @@
+{
+    "name": "youngs",
+    "version": "1.0.0",
+    "scripts": {
+        "build": "tsc",
+        "serve": "tsc && node ./lib/app.js"
+    },
+    "dependencies": {
+        "@types/restify": "^5.0.6",
+        "botbuilder": "^3.13.1",
+        "restify": "^6.3.4"
+    }
+}
