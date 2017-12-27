@@ -34,10 +34,13 @@ const luisModelUrl = 'https://' + luisAPIHostName + '/luis/v1/application?id=' +
 // Main dialog with LUIS
 let recognizer = new builder.LuisRecognizer(luisModelUrl)
 let intents = new builder.IntentDialog({ recognizers: [recognizer] })
-    .matches("deposit", (session) => {
+    .matches("Greeting", (session) => {
+        session.send("Greeting")
+    })
+    .matches("Deposit", (session) => {
         session.send("You get deposit.")
     })
-    .matches("balance", (session) => {
+    .matches("Balance", (session) => {
         session.send("You get balance")
     })
     .onDefault((session) => {
