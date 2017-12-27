@@ -38,7 +38,8 @@ let intents = new builder.IntentDialog({ recognizers: [recognizer] })
         session.send("Greeting")
     })
     .matches("Deposit", (session) => {
-        session.send("You get deposit.")
+        // session.send("You get deposit.")
+        session.beginDialog("Deposit")
     })
     .matches("Balance", (session) => {
         session.send("You get balance")
@@ -48,6 +49,16 @@ let intents = new builder.IntentDialog({ recognizers: [recognizer] })
     })
 
 bot.dialog("/", intents)
+bot.dialog("Deposit", [
+    (session) => {
+        builder.Prompts.number(session, "金額？", { retryPrompt: "請輸入數字" })
+    },
+    (session, results) => {
+        session.dialogData.amount = results.response;
+        session.send("已為您加值 %d", results.response);
+        session.endDialogWithResult({ response: session.dialogData.amount })
+    }
+])
 
 
 
