@@ -38,7 +38,7 @@ let intents = new builder.IntentDialog({ recognizers: [recognizer] })
         session.send("Greeting")
     })
     .matches("Deposit", (session) => {
-        // session.send("You get deposit.")
+        console.log("Deposit: ", session.message)
         session.beginDialog("Deposit")
     })
     .matches("Balance", (session) => {
@@ -52,7 +52,6 @@ bot.dialog("/", intents)
 bot.dialog("Deposit", [
     (session) => {
         let entities = session.message.entities;
-        console.log("Deposit: ", session.message)
         entities.forEach(entity => session.send(entity))
         builder.Prompts.number(session, "金額？", { retryPrompt: "請輸入數字" })
     },
