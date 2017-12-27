@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "scripts": {
         "build": "tsc",
-        "serve": "tsc && node ./lib/app.js"
+        "serve": "tsc && node ./dist/app.js"
     },
     "dependencies": {
         "@types/restify": "^5.0.6",
