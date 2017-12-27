@@ -3,15 +3,12 @@
     "version": "1.0.0",
     "scripts": {
         "build": "tsc",
-<<<<<<< HEAD
-        "serve": "tsc && node ./dist/app.js"
-=======
         "serve": "tsc && node app.js"
->>>>>>> f3afab8d53d1e0b932eb4dcc048d53542fc186e4
     },
     "dependencies": {
         "@types/restify": "^5.0.6",
         "botbuilder": "^3.13.1",
+        "botbuilder-azure": "^3.0.4",
         "restify": "^6.3.4"
     }
 }

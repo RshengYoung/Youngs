@@ -7,11 +7,7 @@
         "module": "commonjs",
         "noImplicitReturns": true,
         "sourceMap": true,
-<<<<<<< HEAD
-        "outDir": "dist"
-=======
         "outDir": ""
->>>>>>> f3afab8d53d1e0b932eb4dcc048d53542fc186e4
     },
     "compileOnSave": true,
     "include": [
