@@ -46,6 +46,7 @@ bot.dialog("/", intents);
 bot.dialog("Deposit", [
     (session) => {
         let entities = session.message.entities;
+        console.log("Deposit: ", session.message);
         entities.forEach(entity => session.send(entity));
         builder.Prompts.number(session, "金額？", { retryPrompt: "請輸入數字" });
     },
